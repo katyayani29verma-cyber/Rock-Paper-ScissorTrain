@@ -1,6 +1,6 @@
 import cv2
 import mediapipe as mp
-import csv
+# import csv
 
 mp_hands = mp.solutions.hands(
  max_num_hands = 1,
