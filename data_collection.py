@@ -4,9 +4,6 @@ import pandas as pd
 import os
 import time
 
-# =============================
-# Initialize MediaPipe
-# =============================
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(
     static_image_mode=False,
