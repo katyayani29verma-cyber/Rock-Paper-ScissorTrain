@@ -2,6 +2,8 @@ import cv2
 import mediapipe as mp
 import joblib
 import numpy as np
+from pythonlogic.py import decide_winner
+import random
 
 # =============================
 # Load Trained Model
@@ -74,6 +76,11 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+player_move = prediction[0]
+computer_move = random.choice(["rock", "paper", "scissors"])
 
+result = decide_winner(player_move, computer_move)
+
+print(result)
 cap.release()
 cv2.destroyAllWindows()
